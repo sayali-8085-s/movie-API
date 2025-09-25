@@ -26,10 +26,11 @@ SECRET_KEY = 'django-insecure-mxi0p(79c52dj)p=8lxw7@f9_^m#&j61ifppa^t@5e2)a_-7b!
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'movie-api-2-6js9.onrender.com',  # Render ka naya URL
+    'movie-api-2-6js9.onrender.com',  # Render ka current URL
     'localhost',
     '127.0.0.1',
 ]
+
 
 # Application definition
 
