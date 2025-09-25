@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'app',
     'rest_framework',
     'rest_framework_simplejwt',
+    "corsheaders",
 ]
 
 MIDDLEWARE = [
@@ -54,6 +55,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "corsheaders.middleware.CorsMiddleware",
 ]
 
 ROOT_URLCONF = 'project.urls'
@@ -147,3 +149,27 @@ STATICFILES_DIRS =[os.path.join(BASE_DIR ,'static')]
 MEDIA_URL ='/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR ,'media')
 
+# corse 
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",  # React default dev server
+    "http://127.0.0.1:8080",  # Vue default dev server
+]
+
+
+CORS_ALLOW_METHODS = (
+    "DELETE",
+    "GET",
+    "OPTIONS",
+    "PATCH",
+    "POST",
+    "PUT",
+)
+
+CORS_ALLOW_HEADERS = (
+    "accept",
+    "authorization",
+    "content-type",
+    "user-agent",
+    "x-csrftoken",
+    "x-requested-with",
+)
